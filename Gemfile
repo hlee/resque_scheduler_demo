@@ -6,8 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-#gem 'resque' # background jobs
-#gem 'resque-scheduler' # job scheduling
+gem 'resque' # background jobs
+gem 'resque-scheduler' # job scheduling
 
 
 # Gems used only for assets and not required
