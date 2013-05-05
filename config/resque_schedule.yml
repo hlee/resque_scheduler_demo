@@ -1,5 +1,6 @@
 do_my_job:
   every: 30s
   class: MyJob
+  queue: do_my_job
   args:
   description: Runs the perform method in MyJob

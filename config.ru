@@ -1,4 +1,9 @@
 # This file is used by Rack-based servers to start the application.
 
 require ::File.expand_path('../config/environment',  __FILE__)
-run ResqueSchedulerDemo::Application
+require 'resque/server'
+#require 'resque/status_server'
+#run ResqueSchedulerDemo::Application
+run Rack::URLMap.new \
+  "/"       => ResqueSchedulerDemo::Application,
+  "/resque" => Resque::Server.new
